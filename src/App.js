@@ -37,8 +37,6 @@ function App() {
 
       </header>
       {
-
-
         /* <input
           placeholder="Title"
           value={title}
@@ -53,7 +51,7 @@ function App() {
         <button onClick={createPost}>Create Post</button> */
       }
       
-      <PostList posts={posts} post={post} />
+      <PostList posts={posts}/>
     </div>
   );
 }
