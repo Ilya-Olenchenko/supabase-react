@@ -40,7 +40,7 @@ function App() {
       <input
         placeholder="Content"
         value={content}
-        onChange={e => setPost({ ...post, title: e.target.value })}
+        onChange={e => setPost({ ...post, content: e.target.value })}
       />
       <button onClick={createPost}>Create Post</button>
       {
