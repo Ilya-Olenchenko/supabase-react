@@ -48,7 +48,7 @@ function App() {
         <button onClick={createPost}>Create Post</button> */
       }
 
-      <PostList posts={posts} />
+      <PostList posts={posts}/>
     </div>
   );
 }
