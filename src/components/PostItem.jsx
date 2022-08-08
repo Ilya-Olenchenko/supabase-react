@@ -1,35 +1,21 @@
 import React from 'react';
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import AceEditor from "react-ace";
-
-import "ace-builds/src-noconflict/mode-css";
-import "ace-builds/src-noconflict/theme-textmate";
-import "ace-builds/src-noconflict/ext-language_tools";
+SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const PostItem = (props) => {
-    return (
-        <div className="post">
-            <div className="post__content">
-                <strong>{props.post.title}</strong>
-                <div>
-                    {/* {props.post.content} */}
-                    <div>  {
-                        <AceEditor className='aceeditor'
-                            mode="css"
-                            theme="textmate"
-                            name="UNIQUE_ID_OF_DIV"
-                            showGutter={false}
-                            fontSize={20}
-                            setReadOnly={true}
-                            value={props.post.content}
-                            highlightActiveLine={false}
-                            editorProps={{ $blockScrolling: true}}
-                        />
-                    }</div>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="post">
+      <div className="post__content">
+        <strong>{props.post.title}</strong>
+        <SyntaxHighlighter language="css" style={vs}>
+          {props.post.content}
+        </SyntaxHighlighter>
+      </div>
+    </div>
+  );
 };
 
 export default PostItem;
