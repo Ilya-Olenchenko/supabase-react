@@ -15,20 +15,6 @@ import "ace-builds/src-noconflict/ext-language_tools";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <AceEditor
-      mode="css"
-      theme="textmate"
-      name="UNIQUE_ID_OF_DIV"
-      showGutter={false}
-      fontSize={20}
-      setReadOnly={true}
-      value={`.home{
-      color: white;
-    }`}
-      highlightActiveLine={false}
-      editorProps={{ $blockScrolling: true }}
-    /> */}
-
     <App />
   </React.StrictMode>
 );

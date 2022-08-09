@@ -4,8 +4,8 @@ import { supabase } from './client'
 import PostList from './components/PostList';
 function App() {
   const [posts, setPosts] = useState([])
-  const [post, setPost] = useState({ title: "", content: "" })
-  const { title, content } = post
+  const [post, setPost] = useState({ title: "", description: "" })
+  const { title, description } = post
 
   useEffect(() => {
     fetchPosts()
@@ -23,10 +23,10 @@ function App() {
     await supabase
       .from('posts')
       .insert([
-        { title, content }
+        { title, description }
       ])
       .single()
-    setPost({ title: "", content: "" })
+    setPost({ title: "", description: "" })
     fetchPosts()
   }
 
@@ -41,14 +41,18 @@ function App() {
         />
         
         <input
-          placeholder="Content"
-          value={content}
-          onChange={e => setPost({ ...post, content: e.target.value })}
+          placeholder="description"
+          value={description}
+          onChange={e => setPost({ ...post, description: e.target.value })}
         />
         <button onClick={createPost}>Create Post</button> */
       }
 
-      <PostList posts={posts}/>
+      <img src="https://i.ibb.co/nQ8Qgqk/f5baef4b6b6677020ab8d091ef78a3bc-w200.gif"/>
+
+      <PostList posts={posts} />
+     
+      <img src="https://i.ibb.co/nQ8Qgqk/f5baef4b6b6677020ab8d091ef78a3bc-w200.gif"/>
     </div>
   );
 }

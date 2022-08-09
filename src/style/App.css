@@ -34,9 +34,9 @@
 
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .post {
@@ -48,7 +48,7 @@
   background-color: wheat;
 
   box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
   border-top: 3px solid red;
 }
