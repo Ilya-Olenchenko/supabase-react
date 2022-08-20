@@ -1,6 +1,5 @@
 import React from 'react'
 import PostItem from './PostItem'
-import classes from './PostList.module.css'
 
 const PostList = ({ posts }) => {
     return (
@@ -8,7 +7,7 @@ const PostList = ({ posts }) => {
             <div key={post.id}>
                 <PostItem post={post} />
             </div>
-        ))
+        )).reverse()
     );
 }
 

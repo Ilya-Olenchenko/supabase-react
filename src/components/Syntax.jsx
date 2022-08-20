@@ -9,7 +9,7 @@ const Syntax = ({ props }) => {
     return (
       <div>
         <SyntaxHighlighter language="css" style={vs}>
-        {props.post.description}
+        {/* ТЕКСТ */}
         </SyntaxHighlighter>
       </div>
     );

@@ -14,13 +14,14 @@ header{
     left: 0;
     top: 0;
 }
-img{
+.logo_img{
     width: 70px;
     height: 70px;
     padding-left: 20px;
     padding-right: 20px;
 }
-h1{
+
+.nice_done_h1{
     font-family: 'Junge', serif;
     font-size: 48px;
     color: #2637CE;
@@ -28,10 +29,10 @@ h1{
 }
 
 @media (max-width:400px) {
-    h1{
+    .nice_done_h1{
         font-size: 35px;
     }
-    img{
+    .logo_img{
         width: 60px;
         height: 60px;
         padding-left: 10px;

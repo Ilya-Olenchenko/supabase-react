@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react'
 import { supabase } from './client'
 import PostList from './components/PostList'
 import Header from './components/Header'
+
 function App() {
   const [posts, setPosts] = useState([])
-  const [post, setPost] = useState({ title: "", description: "" })
-  const { title, description } = post
+  const [post, setPost] = useState({ img_link: "", title: "", description: "" })
+  const {img_link, title, description } = post
 
   useEffect(() => {
     fetchPosts()
@@ -24,10 +25,10 @@ function App() {
     await supabase
       .from('posts')
       .insert([
-        { title, description }
+        {img_link, title, description }
       ])
       .single()
-    setPost({ title: "", description: "" })
+    setPost({img_link: "", title: "", description: "" })
     fetchPosts()
   }
 
@@ -48,12 +49,10 @@ function App() {
         <button onClick={createPost}>Create Post</button> */
       }
 
-      <Header />
+      <Header/>
       <div className='container'>
         <PostList posts={posts} />
       </div>
-
-      {/* <img src="https://i.ibb.co/nQ8Qgqk/f5baef4b6b6677020ab8d091ef78a3bc-w200.gif"/> */}
     </div>
   );
 }
