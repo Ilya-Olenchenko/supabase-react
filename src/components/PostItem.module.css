@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+
 .post {
     display: flex;
     padding: 15px;
@@ -16,7 +18,8 @@
 }
 
 .postTitle {
-    color: black;
+    font-family: 'Junge', serif;
+    color: #7353CE;
     font-size: 20px;
     margin: 0;
     padding: 0;

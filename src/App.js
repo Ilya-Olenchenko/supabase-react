@@ -6,8 +6,8 @@ import Header from './components/Header'
 
 function App() {
   const [posts, setPosts] = useState([])
-  const [post, setPost] = useState({ img_link: "", title: "", description: "" })
-  const {img_link, title, description } = post
+  const [post, setPost] = useState({ img_link: "", title: "", description: "", css: "", html: "", js: "" })
+  const { img_link, title, description } = post
 
   useEffect(() => {
     fetchPosts()
@@ -25,10 +25,10 @@ function App() {
     await supabase
       .from('posts')
       .insert([
-        {img_link, title, description }
+        { img_link, title, description }
       ])
       .single()
-    setPost({img_link: "", title: "", description: "" })
+    setPost({ img_link: "", title: "", description: "" })
     fetchPosts()
   }
 
@@ -49,7 +49,7 @@ function App() {
         <button onClick={createPost}>Create Post</button> */
       }
 
-      <Header/>
+      <Header />
       <div className='container'>
         <PostList posts={posts} />
       </div>
