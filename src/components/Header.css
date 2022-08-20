@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+
+header{
+    background-color: #B1E9B7;
+    width: 99%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+img{
+    width: 70px;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h1{
+    font-family: 'Junge', serif;
+    font-size: 48px;
+    color: #2637CE;
+    font-weight: 100;
+}
+
+@media (max-width:400px) {
+    h1{
+        font-size: 35px;
+    }
+    img{
+        width: 60px;
+        height: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,7 +1,8 @@
 import './style/App.css';
 import { useState, useEffect } from 'react'
 import { supabase } from './client'
-import PostList from './components/PostList';
+import PostList from './components/PostList'
+import Header from './components/Header'
 function App() {
   const [posts, setPosts] = useState([])
   const [post, setPost] = useState({ title: "", description: "" })
@@ -31,7 +32,6 @@ function App() {
   }
 
   return (
-
     <div className="App">
       {
         /* <input
@@ -48,11 +48,12 @@ function App() {
         <button onClick={createPost}>Create Post</button> */
       }
 
-      <img src="https://i.ibb.co/nQ8Qgqk/f5baef4b6b6677020ab8d091ef78a3bc-w200.gif"/>
+      <Header />
+      <div className='container'>
+        <PostList posts={posts} />
+      </div>
 
-      <PostList posts={posts} />
-     
-      <img src="https://i.ibb.co/nQ8Qgqk/f5baef4b6b6677020ab8d091ef78a3bc-w200.gif"/>
+      {/* <img src="https://i.ibb.co/nQ8Qgqk/f5baef4b6b6677020ab8d091ef78a3bc-w200.gif"/> */}
     </div>
   );
 }
