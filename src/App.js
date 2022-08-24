@@ -6,8 +6,8 @@ import Header from './components/Header'
 
 function App() {
   const [posts, setPosts] = useState([])
-  const [post, setPost] = useState({ img_link: "", title: "", description: "", css: "", html: "", js: "" })
-  const { img_link, title, description } = post
+  const [post, setPost] = useState({ id: "", img_link: "", title: "", description: "", css: "", html: "", js: "" })
+  const { id, img_link, title, description, css, html, js } = post
 
   useEffect(() => {
     fetchPosts()
@@ -18,17 +18,17 @@ function App() {
       .from('posts')
       .select()
     setPosts(data)
-    console.log("data: ", data)
+    // console.log("data: ", data)
   }
 
   async function createPost() {
     await supabase
       .from('posts')
       .insert([
-        { img_link, title, description }
+        { id, img_link, title, description, css, html, js }
       ])
       .single()
-    setPost({ img_link: "", title: "", description: "" })
+    setPost({ id: " ", img_link: "", title: "", description: "", css: "", html: "", js: "" })
     fetchPosts()
   }
 
