@@ -1,9 +1,12 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const PostIdPage = () =>{
+    const params = useParams()
+
     return(
         <div>
-            <h1>Hello world!</h1>
+            <h1>id</h1>
         </div>
     );
 };
