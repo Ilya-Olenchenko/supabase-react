@@ -2,6 +2,7 @@ import React from 'react'
 
 import logo from './logo512.png'
 import classes from './Header.module.css'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -13,8 +14,8 @@ const Header = () => {
             </div>
             
             <div className={classes.links}>
-                <a href='/about'>about</a>
-                <a href='/posts'>Стрічка з контентом</a>
+                <Link to='/about'>about</Link>
+                <Link to='/posts'>Стрічка з контентом</Link>
             </div>
         </header>
     )

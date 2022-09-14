@@ -1,7 +1,7 @@
- import '../style/App.css';
- import { supabase } from '../client'
- import PostList from '../components/PostList'
- import {useState,useEffect} from 'react'
+import '../style/App.css';
+import { supabase } from '../client'
+import PostList from '../components/PostList'
+import { useState, useEffect } from 'react'
 
 function Posts() {
   const [posts, setPosts] = useState([])

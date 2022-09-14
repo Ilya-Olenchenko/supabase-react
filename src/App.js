@@ -1,19 +1,13 @@
 import React from "react"
-import {BrowserRouter,Route} from 'react-router-dom'
-import About from "./pages/About"
-import Posts from "./pages/Posts"
+import { BrowserRouter } from 'react-router-dom'
 import Header from "./components/Header"
+import AppRouter from "./components/AppRouter"
 
-const App = () =>{
-    return(
+const App = () => {
+    return (
         <BrowserRouter>
-              <Header />
-             <Route path="/about">
-                <About/>
-            </Route> 
-            <Route path="/posts">
-                <Posts/>
-            </Route> 
+            <Header />
+            <AppRouter />
         </BrowserRouter>
     );
 };
