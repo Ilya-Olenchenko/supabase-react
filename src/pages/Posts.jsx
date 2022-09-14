@@ -1,8 +1,7 @@
-import './style/App.css';
-import { useState, useEffect } from 'react'
-import { supabase } from './client'
-import PostList from './components/PostList'
-import Header from './components/Header'
+ import '../style/App.css';
+ import { supabase } from '../client'
+ import PostList from '../components/PostList'
+ import {useState,useEffect} from 'react'
 
 function Posts() {
   const [posts, setPosts] = useState([])
@@ -49,8 +48,6 @@ function Posts() {
         />
         <button onClick={createPost}>Create Post</button> */
       }
-
-      <Header />
       <div className='container'>
         <PostList posts={posts} />
       </div>

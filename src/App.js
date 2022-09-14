@@ -1,13 +1,21 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from "react"
+import {BrowserRouter,Route} from 'react-router-dom'
+import About from "./pages/About"
+import Posts from "./pages/Posts"
+import Header from "./components/Header"
 
 const App = () =>{
     return(
-        <div>
-            <h1>id = </h1>
-        </div>
+        <BrowserRouter>
+              <Header />
+             <Route path="/about">
+                <About/>
+            </Route> 
+            <Route path="/posts">
+                <Posts/>
+            </Route> 
+        </BrowserRouter>
     );
 };
- //React JS фундаментальный курс от А до Я 
- //time - 2:13:40
+
 export default App;
