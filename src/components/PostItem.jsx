@@ -4,8 +4,8 @@ import {useHistory} from 'react-router-dom';
 
 const PostItem = (props) => {
   const router = useHistory()
-
   return (
+
     <div className={classes.post}>
       <img className={classes.postImg} src={props.post.img_link}></img>
       <h1 className={classes.postTitle}>{props.post.title}</h1>
